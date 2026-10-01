@@ -1,0 +1,19 @@
+1. ARGO CD WEB UI ACCESS ENABLE :
+    - kubectl port-forward svc/argocd-server -n argocd 8080:80
+
+2. GET CREDENTIALS:
+    - kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+
+    encrypted password: alNHeHM2d1FuclhCMVZvUA==
+    actaul password : jSGxs6wQnrXB1VoP
+    USERNAME: admin
+
+3. Access argocd API through CLI
+    -  argocd login server_address:port 
+    e.g. argocd login localhost:8080
+
+    - it will prompt you for user credentails 
+
+optional :
+    - To the details of user logged in argoCD CLI use below:
+        argocd account get-user-info
