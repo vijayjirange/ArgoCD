@@ -10,5 +10,5 @@ spec:
     targetRevision: master
     path: guestbook
   destination:
-    server: https://127.0.0.1:62950
+    server: https://kubernetes.default.svc
     namespace: default
